@@ -45,7 +45,7 @@ const zooAnimals = [
   },
 ];
 
-console.log("==== ADVANCED Array Methods ====");
+console.log(`\n`, "==== ADVANCED Array Methods ====", `\n\n`);
 
 /* Request 1: .forEach()
 
@@ -56,7 +56,7 @@ let displayNames = [];
 zooAnimals.forEach((item) =>
   displayNames.push(`Name: ${item.animal_name}, Scientific: ${item.scientific_name}.`)
 );
-console.log(displayNames);
+console.log("Request 1 to use array.forEach():", displayNames);
 
 /* Request 2: .map()
 
@@ -65,7 +65,7 @@ The zoos need a list of all their animal's names (animal_name only) converted to
 */
 
 const lowCaseAnimalNames = zooAnimals.map((item) => item.animal_name.toLowerCase());
-console.log(lowCaseAnimalNames);
+console.log("Request 2 to use array.map():", lowCaseAnimalNames);
 
 /* Request 3: .filter() 
 
@@ -73,7 +73,7 @@ The zoos are concerned about animals with a lower population count. Using filter
 
 */
 const lowPopulationAnimals = zooAnimals.filter((item) => item.population < 5);
-console.log(lowPopulationAnimals);
+console.log("Request 3 to use array.filter():", lowPopulationAnimals);
 
 /* Request 4: .reduce() 
 
@@ -84,7 +84,7 @@ let populationTotal = 0;
 populationTotal = zooAnimals.reduce((accum, items) => {
   return (accum = accum + items.population);
 }, 0);
-console.log(populationTotal);
+console.log("Request 4 to use array.reduce():", populationTotal);
 
 // ==== Callbacks ====
 
@@ -118,9 +118,9 @@ function greeting(firstName, lastName) {
 }
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
-console.log(consume(2, 2, add)); // 4
-console.log(consume(10, 16, multiply)); // 160
-console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
+console.log("Using callback function to add 2 + 2:", consume(2, 2, add)); // 4
+console.log("Using callback function to multiply 10 + 16:", consume(10, 16, multiply)); // 160
+console.log("Using callback function to return a string:", consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
 
 /*
 

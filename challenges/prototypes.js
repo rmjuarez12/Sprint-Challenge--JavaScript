@@ -1,5 +1,5 @@
 /* ===== Prototype Practice ===== */
-console.log("===== Prototype Practice =====");
+console.log(`\n`, "===== Prototype Practice =====", `\n\n`);
 // Task: You are to build a cuboid maker that can return values for a cuboid's volume or surface area. Cuboids are similar to cubes but do not have even sides. Follow the steps in order to accomplish this challenge.
 
 /* == Step 1: Base Constructor ==
@@ -44,5 +44,8 @@ CuboisMaker.prototype.surfaceArea = function () {
 const cuboid = new CuboisMaker(4, 5, 5);
 
 // Test your volume and surfaceArea methods by uncommenting the logs below:
-console.log(cuboid.volume()); // 100
-console.log(cuboid.surfaceArea()); // 130
+console.log("Using a prototype and constructor function to get the volume of a cuboid:", cuboid.volume()); // 100
+console.log(
+  "Using a prototype and constructor function to get the surface area of a cuboid:",
+  cuboid.surfaceArea()
+); // 130

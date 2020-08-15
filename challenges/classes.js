@@ -1,5 +1,5 @@
 // 1. Copy and paste your prototype in here and refactor into class syntax.
-console.log("===== Classes =====");
+console.log(`\n`, "===== Classes =====", `\n\n`);
 
 function CuboisMaker(length, width, height) {
   this.length = length;
@@ -42,10 +42,12 @@ class CuboisMakerClass {
 const cuboid2 = new CuboisMakerClass(4, 5, 5);
 
 // Test your volume and surfaceArea methods by uncommenting the logs below:
-console.log(cuboid2.volume()); // 100
-console.log(cuboid2.surfaceArea()); // 130
+console.log("Using a class to get the volume of a cuboid:", cuboid2.volume()); // 100
+console.log("Using a class to get the surface area of a cuboid:", cuboid2.surfaceArea()); // 130
 
 // Stretch Task: Extend the base class CuboidMaker with a sub class called CubeMaker.  Find out the formulas for volume and surface area for cubes and create those methods using the dimension properties from CuboidMaker.  Test your work by logging out your volume and surface area.
+
+console.log(`\n`, "===== Classes(Stretch) =====", `\n\n`);
 
 class CubeMaker extends CuboisMakerClass {
   constructor(attrs) {
@@ -67,5 +69,5 @@ class CubeMaker extends CuboisMakerClass {
 
 const cube = new CubeMaker(3, 3, 3);
 
-console.log(cube.volume());
-console.log(cube.surfaceArea());
+console.log("Using a sub-class to get the volume of a cuboid:", cube.volume());
+console.log("Using a sub-class to get the surface area of a cuboid:", cube.surfaceArea());

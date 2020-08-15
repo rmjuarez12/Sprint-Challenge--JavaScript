@@ -2,7 +2,7 @@
 
 /* Task 1: Study the code below and explain in your own words why nested function can access the variable internal. */
 
-console.log("==== Closures ====");
+console.log(`\n`, "==== Closures ====", `\n\n`);
 
 const external = "I'm outside the function";
 
@@ -19,6 +19,7 @@ myFunction();
 
 // Explanation:
 console.log(
+  "Explanation:",
   `The nested function that is insied "muFunction()" can access the variable "internal" because that variable is within its lexical scope, meaning, it is within the scope in which it can reach it. It the variable was outside of "myFunction()", then it would be outside its lexical scope, thus being unreachable`
 );
 
@@ -35,4 +36,4 @@ function summation(num) {
   return counter;
 }
 
-console.log(summation(4));
+console.log("Using a function that uses closure to get the summation of number 4:", summation(4));
