@@ -26,7 +26,7 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max)
 
-**A: When using the `.forEach`, you are executing a function for each of the items within the array and then you can return your results. `.forEach` can return anything that the function may be executing. When you use `.map`, you are essentially creating a new array with the same length as the original, but modifying each array item in the function. `.map` returns a whole new array, based on your function.**
+**A: When using the `.forEach`, you are executing a function for each of the items within the array and then you can return your results. `.forEach` can return anything that the function may be executing, but it is not stored in a variable, unlike the other array methods, this one just executes. When you use `.map`, you are essentially creating a new array with the same length as the original, but modifying each array item in the function. `.map` returns a whole new array, based on your function. Unlike forEach, this one can be stored in a variable**
 
 2. Explain the difference between a callback and a higher order function.
 
@@ -98,6 +98,6 @@ In your solutions, it is essential that you follow best practices and produce cl
 
 Follow these steps for completing your project:
 
-- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's Repo).
-- [ ] Add your team lead as a Reviewer on the Pull-request
+- [x] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's Repo).
+- [x] Add your team lead as a Reviewer on the Pull-request
 - [ ] TL then will count the HW as done by merging the branch back into master.
