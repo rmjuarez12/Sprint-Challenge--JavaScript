@@ -26,13 +26,23 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max)
 
+**A: When using the `.forEach`, you are executing a function for each of the items within the array and then you can return your results. `.forEach` can return anything that the function may be executing. When you use `.map`, you are essentially creating a new array with the same length as the original, but modifying each array item in the function. `.map` returns a whole new array, based on your function.**
+
 2. Explain the difference between a callback and a higher order function.
+
+**A: A callback is a function that you use inside another function when passed as an argument. So basically, a callback means you are passing that function to be used inside another function. A higher order function, is a function that relies on a callback function in order to work. So in short, a callback function is the function being passed as an argument, while the higher order function is the function using that callback function.**
 
 3. What is closure?
 
+**A: A closure happens when a function uses a variable from the lexical scope. This means that it is using a variable that is outside the function, but it is reachable within its scope. For example, a function that is using a variable from the global scope is considered a closure, since it is using a variable outside from its arguments, but still reachable within the lexical scope.**
+
 4. Describe the four rules of the 'this' keyword.
 
+**A: When we use the `this` keyword, we are referring to the parent object from where it is called. The `this` keyword has 4 key principles(or rules). The first one is the Window Binding principle. This is when the `this` is referencing the object of global scope, since we have not declared object to be used with it. The second ons is the Implicit Binding principle. This is when we have declared object, and we are using the `this` keyword within it, in order to be able to reference any property from that object specifically. The third one is the 'new' Binding principle. This is when we create a new object using a constructor function, and then using the 'new' operator with that constructor. The fourth and last one is the Explicit Binding principle. This is when we combine and link 2 constructor functions(essentially creating a child constructor using a parent constructor's properties) by using the `call()` or `apply()` methods.**
+
 5. Why do we need super() in an extended class?
+
+**A: When we create an extended class, we MUST always reference all of the parent's(or main class) properties. Otherwise, it will not work as an extension, but more like a new class.**
 
 ### Task 1 - Project Set up
 
