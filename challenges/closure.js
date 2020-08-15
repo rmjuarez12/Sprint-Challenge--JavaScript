@@ -35,4 +35,4 @@ function summation(num) {
   return counter;
 }
 
-console.log(sumation(4));
+console.log(summation(4));
