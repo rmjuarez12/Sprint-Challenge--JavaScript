@@ -1,7 +1,73 @@
 // 1. Copy and paste your prototype in here and refactor into class syntax.
+console.log(`\n`, "===== Classes =====", `\n\n`);
+
+function CuboisMaker(length, width, height) {
+  this.length = length;
+  this.width = width;
+  this.height = height;
+}
+
+CuboisMaker.prototype.volume = function () {
+  const formula = this.length * this.width * this.height;
+
+  return formula;
+};
+
+CuboisMaker.prototype.surfaceArea = function () {
+  const formula = 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
+
+  return formula;
+};
+
+class CuboisMakerClass {
+  constructor(length, width, height) {
+    this.length = length;
+    this.width = width;
+    this.height = height;
+  }
+
+  volume() {
+    const formula = this.length * this.width * this.height;
+
+    return formula;
+  }
+
+  surfaceArea() {
+    const formula = 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
+
+    return formula;
+  }
+}
+
+const cuboid2 = new CuboisMakerClass(4, 5, 5);
 
 // Test your volume and surfaceArea methods by uncommenting the logs below:
-// console.log(cuboid.volume()); // 100
-// console.log(cuboid.surfaceArea()); // 130
+console.log("Using a class to get the volume of a cuboid:", cuboid2.volume()); // 100
+console.log("Using a class to get the surface area of a cuboid:", cuboid2.surfaceArea()); // 130
 
 // Stretch Task: Extend the base class CuboidMaker with a sub class called CubeMaker.  Find out the formulas for volume and surface area for cubes and create those methods using the dimension properties from CuboidMaker.  Test your work by logging out your volume and surface area.
+
+console.log(`\n`, "===== Classes(Stretch) =====", `\n\n`);
+
+class CubeMaker extends CuboisMakerClass {
+  constructor(attrs) {
+    super(attrs);
+  }
+
+  volume() {
+    const formula = Math.pow(this.length, 3);
+
+    return formula;
+  }
+
+  surfaceArea() {
+    const formula = 6 * Math.pow(this.length, 2);
+
+    return formula;
+  }
+}
+
+const cube = new CubeMaker(3, 3, 3);
+
+console.log("Using a sub-class to get the volume of a cuboid:", cube.volume());
+console.log("Using a sub-class to get the surface area of a cuboid:", cube.surfaceArea());
